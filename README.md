@@ -10,10 +10,10 @@ Otherwise, you can download the source code above and run it natively in your br
 
 # To Add In Future Versions
 * Improve cross-compatibility between browsers - fixing audio latency and performance issues
-* Tweak object spawning positions, frequency and accelerations for improved gameplay.
-* Refine and optimise game update alogrithm - remove repeated code and pack up into functions for improved efficiency
+* Tweak object spawning positions, spawning frequency and acceleration for improved gameplay.
+* Refine and optimise game update alogrithm - remove repeated code and pack up into functions for tidiness/readability
 * Improve collision detection (remove hardcoded player width modifier values etc)
-* Add function that saves your high score
+* Add a function that saves and displays your high score
 * Animated sprites (basket filling up, an animated health bar, 'splat' effects, etc)
 * Introduce powerups? (bigger paddle, change speed, x2 score etc for limited time)
 * Add button to share score and game link to fb
