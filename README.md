@@ -8,7 +8,7 @@ You can play Fruit-Drop.js <a href="http://richvaughan.co.uk/pages/fruit-drop/fr
 
 Otherwise, you can download the source code above and run it natively in your browser of choice for ultimate performance! 👊
 
-# To Come In Future Versions
+# To Add In Future Versions
 * Improve cross-compatibility between browsers - fixing audio latency and performance issues
 * Tweak object spawning positions, frequency and accelerations for improved gameplay.
 * Refine and optimise game update alogrithm - remove repeated code and pack up into functions for improved efficiency
