@@ -6,7 +6,7 @@ Fruit-Drop.js is an HTML5 Canvas game and my first attempt at object orientated 
 
 You can play Fruit-Drop.js <a href="http://richvaughan.co.uk/pages/fruit-drop/fruit-drop.html">here</a>. I recommend you play either in Chrome or Firefox (where it's been tested successfully). You may experience some audio latency/performance issues in other browsers.
 
-Otherwise, you can download the source code above and run it natively in your browser of choice for ultimate performance! 👊
+Otherwise, you can download the source code above and run it off your disk, for ultimate performance! 👊
 
 ## To Add In Future Versions
 * Improve cross-compatibility between browsers - fixing audio latency and performance issues
