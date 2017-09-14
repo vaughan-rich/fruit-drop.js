@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    
+    <!-- Enables responsive design on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Clean, design font -->
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300" rel="stylesheet">
+    
+    <!-- 8-bit fonts: -->
+    <link href="https://fonts.googleapis.com/css?family=Press Start 2P" rel="stylesheet">
+    
+    <title>Fruit Drop | Richard Vaughan</title>
+    <style> 
+     
+    /* Move the following to a separate CSS/SASS stylesheet? */ 
+       
+        body {
+            background-color:#303030;
+            color: pink;
+        }    
+        
+    	#gameCanvas {
+            font-family: "Press Start 2P";
+            background-image: url("img/8bit_tree_bg.jpg");
+            background-size: contain;
+            display: block; 
+            border-radius:.5%;
+            border:4px solid pink;
+            width:100%;
+            height: auto;
+            margin: auto;
+        
+        }
+        
+        /* Container div for dynamically resizing canvas */
+        div {
+            width:67%;
+            height: auto;
+            margin:auto;
+        }
+        
+        h1 {
+            font-family: 'Press Start 2P', sans-serif;
+            font-size: 1.6em;
+            color: #00a100;
+            margin:auto;
+            margin-top: 1em;
+            margin-bottom: -.2em;
+        }
+        
+        h2 {
+            font-family: 'Rubik', sans-serif;
+            font-size: 1.05em;
+            margin-bottom: 1.5em;
+        }
+        
+        #homeclick {
+            font-family: 'Rubik', sans-serif;
+            color: pink;
+            font-size: 1em;
+            text-decoration: none;
+            
+        }
+        
+        #homeclick:hover {
+            color: #00a100;
+        }
+        
+        p {
+            font-family: 'Press Start 2P', sans-serif;
+            width:80%;
+            font-size: .75em;
+            margin: auto;
+            margin-top: .75em;
+            text-align: center;
+            margin-bottom:1.5em;
+            color: pink;
+        }
+        
+        #p2 {
+            font-size: 0.5em;
+            color: green;
+        }
+        
+        #button {
+            display: inline-block;
+            margin-bottom: 1em !important;
+            width: 20%;
+            height: auto;
+            margin: auto;
+            text-align: center;
+            font-size: .65em;
+            font-family: 'Press Start 2P';
+            border-radius: 2%;
+            padding: .75em; 
+            color: pink;
+            background: green; 
+            border: 2px solid pink;
+           
+        }
+        
+        a {
+            color: #00a100;
+            text-decoration: none;
+            /*font-style: italic;*/
+        }
+        
+        a:hover {
+            color: pink;   
+        }
+        
+        #mute {
+            display: inline-block;
+            float:right;
+            width: 1.4em;
+            height: 1.4em;
+            background-image: url("img/sound_off_HQ.png");
+            background-size: cover;
+        }
+        
+        #sound {
+            position: absolute;
+            top: 10.3em;
+            right: 16.5%;
+            margin-bottom: 1em !important;
+            width: 9%;
+            height: 1.7%;
+            margin: auto;
+            text-align: center;
+            font-size: .65em;
+            font-family: 'Press Start 2P';
+            border-radius: 2%;
+            padding: .75em; 
+            color: pink;
+            background: green; 
+            border: 2px solid pink;
+            margin-left:1em;    
+        }
+        
+        .disclaimer {
+            display:none;
+        }
+        
+        #p3 {
+            font-size: .5em !important;
+            margin-bottom: 1.2em;
+            color: green;
+        }
+        
+        #p3 a {
+            color: #00a100;
+        }
+        #p3 a:hover {
+            color: green;
+        }
+        
+        /* Media query for tablet/mobile screen sizes */
+        @media only screen and (max-width: 1024px) {
+            
+            div {
+                margin:0;
+                margin:auto;
+                width:85%;
+            }
+            h1 {
+                font-size: 1.25em;
+                margin: 0;
+                margin-top:1em !important;
+                margin:auto;
+                text-align: center;
+            }
+            
+            h2 {
+                margin-top: 1em;
+                text-align:left !important;
+            }
+            
+            #gameCanvas {
+                display:none !important;
+            }
+            #button {
+                display:none !important;
+            }
+            #sound {
+                display:none !important;
+            }
+            .disclaimer {
+                margin-top:2em!important;
+                font-size: 1em!important;
+                font-family: 'Press Start 2P',sans-serif!important;
+                display:block!important;
+            }
+            #p2 {
+            display:none!important;
+            }
+            p {
+            display:none!important;
+            }
+            #p3 {
+                display: none !important;
+            }
+}
+        
+</style>   
+</head>
+    
+<body>
+    
+<div>
+<h1>FRUIT-DROP.js</h1>
+<h2>A HTML5 Canvas game, by <a href="../../index.html" id = "homeclick">Richard Vaughan</a>.</h2><div id=button>Click to Play</div>
+<div id="sound">Sound On</div>    
+</div>
+    
+<div class="disclaimer">Fruit-Drop.js does not support touch controls! View on a desktop/laptop to see what you're missing!
+</div>
+
+<div class="disclaimer">If you're already on a PC... resize the window...
+</div> 
+
+<div>
+<canvas id="gameCanvas"></canvas> 
+</div>
+
+<p>How to Play: Catch the fruit in the basket - miss one and you lose a life! Grab a golden fruit for a pick-me-up, but touch a rotten one and you'll ruin the batch! Use the LEFT and RIGHT arrow keys to move.</p> 
+
+<p id="p3">Fruit-Drop.js is best experienced in <a href="https://www.google.com/chrome/index.html">Chrome</a> or <a href="https://www.mozilla.org/en-US/firefox/new/">Firefox</a> for maximum performance and lowest audio latency. You may experience issues using other browsers.</p>
+    
+<p id="p2">Music by Richard Vaughan (c) 2017. Sprites and background image adapted from images found <a href="http://keywordsuggest.org/content/854294-transparent-pixel.html">here</a>, <a href="https://pixabay.com/en/art-bakery-basket-bread-container-1293490/">here</a> and <a href="https://jiinarts.deviantart.com/art/8-bit-tree-155459038">here</a>. 8-bit sfx created using <a href="http://www.bfxr.net/">Bfxr</a>.</p>
+    
+<script src="fruit-drop.js"></script> 
+</body>
+</html>
