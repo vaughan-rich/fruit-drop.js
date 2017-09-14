@@ -8,7 +8,14 @@ You can play Fruit-Drop.js <a href="http://richvaughan.co.uk/pages/fruit-drop/fr
 
 Otherwise, you can download the source code above and run it natively in your browser of choice for ultimate performance! 👊
 
-# To Add In Future Versions
-###Example
-* Item 1
-* Item 2
+# To Come In Future Versions
+* Improve cross-compatibility between browsers - fixing audio latency and performance issues
+* Tweak object spawning positions, frequency and accelerations for improved gameplay.
+* Refine and optimise game update alogrithm - remove repeated code and pack up into functions for improved efficiency
+* Improve collision detection (remove hardcoded player width modifier values etc)
+* Add function that saves your high score
+* Animated sprites (basket filling up, an animated health bar, 'splat' effects, etc)
+* Introduce powerups? (bigger paddle, change speed, x2 score etc for limited time)
+* Add button to share score and game link to fb
+* Possibly add touch capability (or port to iOS app)
+* Any necessary bug fixes
