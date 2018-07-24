@@ -1,6 +1,6 @@
 ## Fruit-Drop.js 🍎
 
-Fruit-Drop.js is an HTML5 Canvas game and my first attempt at writing a browser-based game.
+Fruit-Drop.js is my first attempt at writing a browser-based game, using a HTML5 Canvas.
 
 ## How to Play
 
