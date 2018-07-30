@@ -8,7 +8,7 @@ You can play Fruit-Drop.js <a href="http://richvaughan.co.uk/pages/fruit-drop/fr
 
 Otherwise, you can download the source code above and run it off your disk in a browser of your choice, for ultimate performance! 👊
 
-![Screenshot (screen.png)
+![Screenshot](screen.png)
 
 ## To Add In Future Versions
 * Improve cross-compatibility between browsers - fixing audio latency and performance issues.
