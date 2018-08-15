@@ -10,7 +10,7 @@ Otherwise, you can download the source code above and run it off your disk in a 
 
 ![Screenshot](screen.png)
 
-## To Add In Future Versions
+## To Add in Future Versions
 * Improve cross-compatibility between browsers - fixing audio latency and performance issues.
 * Tweak object spawning positions, spawning frequency and acceleration for improved gameplay.
 * Refine and optimise game update alogrithm - remove repeated code and pack up into functions for tidiness/readability.
