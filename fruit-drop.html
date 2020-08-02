@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- ANALYTICS STUFF: -->
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WKNWNZG');</script>
+<!-- End Google Tag Manager -->
+    <!-- ANALYTICS END -->
+    
     <meta charset="utf-8"/>
     
     <!-- Enables responsive design on mobile devices -->
@@ -12,11 +22,23 @@
     <!-- 8-bit fonts: -->
     <link href="https://fonts.googleapis.com/css?family=Press Start 2P" rel="stylesheet">
     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    
     <title>Fruit Drop | Richard Vaughan</title>
     <style> 
-     
+        
     /* Move the following to a separate CSS/SASS stylesheet? */ 
        
+        #siteseal {
+            
+            display: block;
+            
+            margin-top:2em;
+            
+            text-align: center;
+            
+        }
+        
         body {
             background-color:#303030;
             color: pink;
@@ -157,8 +179,51 @@
             color: green;
         }
         
+
+        h1 img:hover {
+            opacity: 0.75;
+        }
+        
         /* Media query for tablet/mobile screen sizes */
         @media only screen and (max-width: 1024px) {
+            
+                    #cookiePopup {
+            position:fixed;
+            top:0;
+            height:100vh;
+            width:100%;
+            display:flex;
+            justify-content: center;
+            align-items:center;
+            z-index: 100;
+            background-color: #303030;
+        }
+
+        #cookiePopupContents {
+            height:100vh;
+            width:100%;
+            z-index:100;
+            padding: 1.5rem 2rem;
+            text-align:center;
+        }
+
+        button {
+            margin:1rem;
+            font-family: "Press Start 2P";
+        }
+
+        #copy {
+            display:block !important;
+            width:100%;
+        }
+
+        #accept {
+            font-size:1em !important;
+        }
+
+        #decline {
+            font-size:1em !important;
+        }
             
             div {
                 margin:0;
@@ -189,7 +254,7 @@
             }
             .disclaimer {
                 margin-top:2em!important;
-                font-size: 1em!important;
+                font-size: .75em!important;
                 font-family: 'Press Start 2P',sans-serif!important;
                 display:block!important;
             }
@@ -197,20 +262,78 @@
             display:none!important;
             }
             p {
-            display:none!important;
+            display:none;
             }
             #p3 {
                 display: none !important;
             }
+            
+            h1 img {
+                width: 4% !important;
+            }
+            
 }
+        
+        @media only screen and (max-width: 650px) {
+            h1 img {
+                width: 5% !important;
+            }
+        }
+        
+        @media only screen and (max-width: 431px) {
+            h1 img {
+                width: 7% !important;
+            }
+        }
+        
+        #cookiePopup {
+            position:fixed;
+            top:0;
+            height:100vh;
+            width:100%;
+            display:flex;
+            justify-content: center;
+            align-items:center;
+            z-index: 100;
+            background-color: #303030;
+        }
+
+        #cookiePopupContents {
+            height:100vh;
+            width:100%;
+            z-index:100;
+            padding: 1.5rem 2rem;
+            text-align:center;
+        }
+
+        button {
+            font-family: "Press Start 2P";
+            margin:1rem;
+        }
+
+        #copy {
+            width:100% !important;
+        }
+
+        #accept {
+            font-size:1em !important;
+        }
+
+        #decline {
+            font-size:1em !important;
+        }
         
 </style>   
 </head>
     
 <body>
+    <!-- ANALYTICS FALLBACK -->
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKNWNZG"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- ANALYTICS FALLBACK END -->
     
 <div>
-<h1>FRUIT-DROP.js</h1>
+<h1>FRUIT-DROP.js<a href="https://github.com/vaughan-rich/fruit-drop.js"><img src="img/GITHUBPINK.png" style="margin-left:.5em; width: 3.5%; height:auto; display:inline;"></a></h1>
 <h2>A HTML5 Canvas game, by <a href="../../index.html" id = "homeclick">Richard Vaughan</a>.</h2><div id=button>Click to Play</div>
 <div id="sound">Sound On</div>    
 </div>
@@ -218,8 +341,8 @@
 <div class="disclaimer">Fruit-Drop.js does not support touch controls! View on a desktop/laptop to see what you're missing!
 </div>
 
-<div class="disclaimer">If you're already on a PC... resize the window...
-</div> 
+<!--<div class="disclaimer">If you're already on a PC... resize the window...
+</div>--> 
 
 <div>
 <canvas id="gameCanvas"></canvas> 
@@ -227,10 +350,19 @@
 
 <p>How to Play: Catch the fruit in the basket - miss one and you lose a life! Grab a golden fruit for a pick-me-up, but touch a rotten one and you'll ruin the batch! Use the LEFT and RIGHT arrow keys to move.</p> 
 
-<p id="p3">Fruit-Drop.js is best experienced in <a href="https://www.google.com/chrome/index.html">Chrome</a> or <a href="https://www.mozilla.org/en-US/firefox/new/">Firefox</a> for maximum performance and lowest audio latency. You may experience issues using other browsers.</p>
+<!--<p id="p3">Fruit-Drop.js is best experienced in <a href="https://www.google.com/chrome/index.html">Chrome</a> or <a href="https://www.mozilla.org/en-US/firefox/new/">Firefox</a> for maximum performance and lowest audio latency. You may experience issues using other browsers.</p>-->
     
 <p id="p2">Music by Richard Vaughan (c) 2017. Sprites and background image adapted from images found <a href="http://keywordsuggest.org/content/854294-transparent-pixel.html">here</a>, <a href="https://pixabay.com/en/art-bakery-basket-bread-container-1293490/">here</a> and <a href="https://jiinarts.deviantart.com/art/8-bit-tree-155459038">here</a>. 8-bit sfx created using <a href="http://www.bfxr.net/">Bfxr</a>.</p>
     
-<script src="fruit-drop.js"></script> 
+            <div id="cookiePopup">
+    <div id="cookiePopupContents">
+        <p id="copy">This site uses analytics cookies to measure traffic volume. That's all. Honest. Please accept or decline below:</p>
+        <button id = "accept" onclick="acceptCookies()" class="btn draw-border">Accept</button><button id="decline" onclick="declineCookies()" class="btn draw-border">Decline</button>
+    </div>
+  </div>
+    
+<script src="fruit-drop.js"></script>
+<script onload="previousAcceptance();" src="../../scripts/cookies.js"></script>
+
 </body>
 </html>
