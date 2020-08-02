@@ -11,6 +11,7 @@ It's recommended to play either in Chrome or Firefox. Otherwise, you can downloa
 ![Screenshot](screen.png)
 
 ## To Add in Future Versions
+* DataLayer pushes for analytics (game completions, custom dimensions for scores, etc)
 * Improve cross-compatibility between browsers - fixing audio latency and performance issues.
 * Tweak object spawning positions, spawning frequency and acceleration for improved gameplay.
 * Refine and optimise game update alogrithm - remove repeated code and pack up into functions for tidiness/readability.
