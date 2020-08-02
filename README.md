@@ -4,9 +4,9 @@ Fruit-Drop.js is my first attempt at writing a browser-based game, using Javascr
 
 ## How to Play
 
-You can play Fruit-Drop.js <a href="http://richvaughan.co.uk/pages/fruit-drop/fruit-drop.html">here</a>. I recommend you play either in Chrome or Firefox (where it has been tested successfully). You may experience some audio latency/performance issues in other browsers.
+You can play Fruit-Drop.js <a href="http://www.richvaughan.co.uk/pages/fruit-drop/fruit-drop.html">here</a>.
 
-Otherwise, you can download the source code above and run it off your disk in a browser of your choice, for ultimate performance! 👊
+It's recommended to play either in Chrome or Firefox. Otherwise, you can download the source code and run it off your machine for best performance. 👊
 
 ![Screenshot](screen.png)
 
@@ -21,3 +21,6 @@ Otherwise, you can download the source code above and run it off your disk in a 
 * Add button to share score and game link to fb.
 * Possibly add touch capability (or port to iOS app).
 * Any necessary bug fixes
+
+## Note:
+* The code here references the cookie consent management script found in [this](https://github.com/vaughan-rich/vaughan-records) repo.
